@@ -1,0 +1,39 @@
+//main: ../style.less
+
+.resume{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    
+    &::before{
+        content: "";
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        
+        width: 2px;
+        height: 100%;
+        
+        background-color: @black;
+        
+    }
+}
+.resume__title{
+    padding: 3rem;
+    
+    font-weight: 700;
+    font-size: 2.13rem;
+    text-transform: uppercase;
+}
+
+.resume__item{
+    display: flex;
+    height: 100%;
+    max-height: 450px;
+    
+    
+}
+
+
+

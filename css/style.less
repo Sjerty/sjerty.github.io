@@ -1,0 +1,52 @@
+//compress: true
+
+@import "vars";
+
+html{
+    font-size: 15px;
+}
+
+body{
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    color: @black;
+    
+    &.no-scroll{
+        overflow: hidden;
+    }
+}
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+}
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+/* Block */
+
+@import "blocks/container";
+@import "blocks/header";
+@import "blocks/user";
+@import "blocks/nav";
+@import "blocks/intro";
+@import "blocks/works";
+@import "blocks/portfolio";
+@import "blocks/work";
+@import "blocks/btn";
+@import "blocks/about_me";
+@import "blocks/call_me";
+@import "blocks/form";
+@import "blocks/footer";
+@import "blocks/modal";
+@import "blocks/modal-work";
+@import "blocks/resume";
+@import "blocks/experience";
+@import "blocks/skills";
+@import "blocks/education";
+
+/* Helpers */
+
+@import "helpers";

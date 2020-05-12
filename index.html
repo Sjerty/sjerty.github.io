@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" class="style">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body class="">
+
+<!--Header-->
+    <header class="header">
+        <div class="container">
+           
+            <div class="header__inner">
+               
+                <div class="user">
+                    <div class="user__name">Фильченко Егор</div>
+                    <span class="user__span"></span>
+                    <div class="user__prof">Программист<br> и художник</div>
+                </div>
+                <nav class="nav">
+                    <a class="nav__link"  href="#section-1">Работы</a>
+                    <a class="nav__link"  href="#section-2">Обо мне</a>
+                    <a class="nav__link"  href="#section-3">Связь</a>
+                    <a class="nav__link" href="#" data-modal="#modal_resume">Резюме</a>
+                </nav>
+                
+            </div><!--/.header__inner-->
+        </div><!--/.container-->
+    
+    </header>
+    
+<!--Intro-->
+    <section class="intro">
+        <div class="container">
+           
+            <div class="intro__inner">
+                <div class="intro__content">
+                    <h1 class="intro__title">Привет, меня зовут<br> Фильченко Егор</h1>
+                    <h2 class="intro__subtitle">Этот сайт представляет из себя<br> мой дипломный проект</h2>
+                </div>
+                
+                <img src="https://placehold.it/360x360" alt="" class="intro__img">
+                
+            </div><!--/.intro_inner-->
+        </div><!--/.container-->
+        
+    </section>
+    
+<!--Works-->
+    <div class="works" id="section-1">
+        <div class="container">
+           
+            <div class="works__nav">
+                <a href="" class="works__nav-link" data-filter="all">All</a>
+                <a href="" class="works__nav-link" data-filter="website">Website</a>
+                <a href="" class="works__nav-link" data-filter="art">Art</a>
+                <a href="" class="works__nav-link" data-filter="3D">3D</a>
+            </div>
+            
+            <div class="portfolio">
+                <div class="portfolio__col" data-cat="website" data-modal="#modal_project1">
+                   
+                    <div class="work" >
+                        <img class="work__image" src="images/project1_img.png" alt="">
+                        <div class="work__content">
+                            <div class="work__cat">Website
+                                <div class="work__title">
+                                    Project Title
+                                    <time class="work__date" datetime="2020-05-01 20:46">2020</time>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio__col" data-cat="art">
+                   
+                    <div class="work">
+                        <img class="work__image" src="https://placehold.it/370x300" alt="">
+                        <div class="work__content">
+                            <div class="work__cat">Art
+                                <div class="work__title">
+                                    Project Title
+                                    <time class="work__date" datetime="2020-05-01 20:46">2020</time>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio__col" data-cat="3D">
+                   
+                    <div class="work">
+                        <img class="work__image" src="https://placehold.it/370x300" alt="">
+                        <div class="work__content">
+                            <div class="work__cat">3D
+                                <div class="work__title">
+                                    Project Title
+                                    <time class="work__date" datetime="2020-05-01 20:46">2020</time>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio__col" data-cat="art">
+                   
+                    <div class="work">
+                        <img class="work__image" src="https://placehold.it/370x300" alt="">
+                        <div class="work__content">
+                            <div class="work__cat">Art
+                                <div class="work__title">
+                                    Project Title
+                                    <time class="work__date" datetime="2020-05-01 20:46">2020</time>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio__col" data-cat="3D">
+                   
+                    <div class="work">
+                        <img class="work__image" src="https://placehold.it/370x300" alt="">
+                        <div class="work__content">
+                            <div class="work__cat">3D
+                                <div class="work__title">
+                                    Project Title
+                                    <time class="work__date" datetime="2020-05-01 20:46">2020</time>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+            </div><!--/.portfolio-->
+            
+            <div class="text-center" style="display: none">
+                <a href="" class="btn">Загрузить ещё...</a>
+            </div>
+            
+        </div><!--/.container-->
+        
+    </div><!--/.works-->
+    
+    <section class="about-me" id="section-2">
+        <div class="container">
+           
+            <div class="about-me__inner">
+                <div class="about-me__content">
+                    <h2 class="about-me__title">Обо мне</h2>
+                    <p class="about-me__text">Я обычный студент проживающий в Саратовской области и в данный момент находящийся на обучении в ППК СГТУ им. Гагарина Ю.А. по специализаии ПКС(Программирование в компьютерных системах). Сейчас я уже заканчиваю 4 курс обучения, который по-совместительству является моим последним годом обучения в данном колледже.
+Этот сайт является дипломным проектом который я подготовил в рамках окончания обучения. В основном моими любимыми занятиями являются рисование и программирование, я так же интересуюсь созданием сайтов, поэтому для проверки своих возможностей в этой сфере я и решил выбрать дипломным проектом сайт-портфолио.</p>
+                    <div class="text-right">
+                        <a href="" class="btn" data-modal="#modal_resume">Резюме</a>
+                    </div>
+                </div>
+                <img class="about-me__image" src="https://placehold.it/420x420" alt="">
+            </div>
+            
+        </div><!--/.container-->
+        
+    </section> <!--/.about-me-->
+    
+    <section class="call-me" id="section-3">
+        <div class="container">
+            <div class="call-me__inner">
+                <img class="call-me__image" src="https://placehold.it/480x480" alt="">
+                <div class="call-me__form">
+                    <h2 class="call-me__title">Напишите мне</h2>
+                    <form class="form" action="/" method="post">
+                        <input class="form_input" type="text" id="input-email" placeholder="E-mail">
+                        <textarea class="form_textarea" name="input-text" id="" placeholder="Сообщение..."></textarea>
+                        <div class="text-right">
+                            <button class="btn" type="submit">Отправить</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+        </div><!--/.container-->
+
+    </section><!--/.call-me-->
+    
+    <footer class="footer">
+       <div class="container">
+            <div class="footer__inner">
+                <div class="footer__user">
+                    <div class="footer__name">&copy; Е. К. Фильченко, 2020</div>
+                    <span class="footer__span"></span>
+                    <a href="https://vk.com/sjerty" target="_blank">
+                        <img class="footer_img" src="images/vk.svg" alt="" width="40">
+                    </a>
+                </div>
+                
+                <div class="footer__nav">
+                    <a href="#section-1" class="footer__link">Работы</a>
+                    <a href="#section-2" class="footer__link">Обо мне</a>
+                    <a href="#" class="footer__link" data-modal="#modal_resume">Резюме</a>
+                </div>
+            </div>
+        </div><!--/.container-->
+        
+    </footer><!--/.footer-->
+    
+    <!--Modals-->
+    <div class="modal" id="modal_project1" >
+        <div class="modal__dialog">
+           
+           <button class="modal__close" type="button" data-close>
+               <img src="images/close.svg" alt="" width="35">
+           </button>
+           
+            <div class="modal-work">
+                <div class="modal-work__preview">
+                    <img class="modal-work__image" src="https://placehold.it/780x1300" alt="">
+                </div>
+                <div class="modal-work__content">
+                    <h2 class="modal-work__title">Сайт-портфолио</h2>
+                    <h3 class="modal-work__cat">
+                        Website<br>2020
+                    </h3>
+                    <div class="modal-work__info">
+                        <div class="modal-work__client">
+                           <div class="modal-work__client-title">
+                            Клиент: 
+                            </div>
+                            <div class="modal-work__company">Никто</div>
+                        </div>
+                        
+                        <div class="modal-work__text">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque adipisci quos, quibusdam placeat suscipit, dolorum veniam nihil fugiat deserunt obcaecati reiciendis nulla rem iusto doloribus voluptatibus, sunt inventore quidem explicabo. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, distinctio earum, voluptates, unde labore dolorum odit architecto repellat voluptatibus doloremque harum vel, amet optio veritatis velit. Cum quae dolor nisi?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, distinctio earum, voluptates, unde labore dolorum odit architecto repellat voluptatibus doloremque harum vel, amet optio veritatis velit. Cum quae dolor nisi?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, distinctio earum, voluptates, unde labore dolorum odit architecto repellat voluptatibus doloremque harum vel, amet optio veritatis velit. Cum quae dolor nisi?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, distinctio earum, voluptates, unde labore dolorum odit architecto repellat voluptatibus doloremque harum vel, amet optio veritatis velit. Cum quae dolor nisi?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, distinctio earum, voluptates, unde labore dolorum odit architecto repellat voluptatibus doloremque harum vel, amet optio veritatis velit. Cum quae dolor nisi?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, distinctio earum, voluptates, unde labore dolorum odit architecto repellat voluptatibus doloremque harum vel, amet optio veritatis velit. Cum quae dolor nisi?</p>
+                        </div>
+                    </div><!--/.modal-work__info-->
+                    
+                </div><!--/.modal-work__content-->
+                
+            </div><!--/.modal-work-->
+            
+        </div><!--/.modal__dialog-->
+        
+    </div><!--/.modal-->
+    
+    <div class="modal" id="modal_resume" >
+        <div class="modal__dialog" >
+           
+           <button class="modal__close" type="button" data-close>
+               <img src="images/close.svg" alt="" width="35">
+           </button>
+           
+             <div class="resume">
+                 <h2 class="resume__title">Резюме</h2>
+                 <div class="education">
+                     <h2 class="education__title">Образование</h2>
+                     
+                     <div class="education__item">
+                         <div class="education__date">
+                             2016-2020
+                         </div>
+                         <div class="education__inst">
+                             ППК СГТУ им. Гагарина Ю.А
+                            Программирование в компьютерных системах
+                         </div>
+                         <div class="education__city">
+                             г. Саратов, Россия
+                         </div>
+                     </div>
+                 </div>
+                 <div class="resume__item">
+                     <div class="experience">
+                         <h2 class="experience__title" >Опыт работы</h2>
+                         <div class="experience__item">
+                             <p>Пока тут пусто, но вы всегда 
+                                можете это исправить :></p>
+                         </div>
+                     </div>
+                     <div class="skills">
+                         <h2 class="skills__title">Скиллы</h2>
+                        <div class="skills__item">
+                            <div class="skills__skill">Figma</div>
+                            <div class="skills__bar">
+                                <div class="skills__progress_bar">
+                                    <div class="skills__progress" style="width:45%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skills__item">
+                            <div class="skills__skill">Photoshop</div>
+                            <div class="skills__bar">
+                                <div class="skills__progress_bar">
+                                    <div class="skills__progress" style="width:65%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skills__item">
+                            <div class="skills__skill">Html</div>
+                            <div class="skills__bar">
+                                <div class="skills__progress_bar">
+                                    <div class="skills__progress" style="width:95%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skills__item">
+                            <div class="skills__skill">CSS</div>
+                            <div class="skills__bar">
+                                <div class="skills__progress_bar">
+                                    <div class="skills__progress" style="width:65%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skills__item">
+                            <div class="skills__skill">C#</div>
+                            <div class="skills__bar">
+                                <div class="skills__progress_bar">
+                                    <div class="skills__progress" style="width:50%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skills__item">
+                            <div class="skills__skill">Blender</div>
+                            <div class="skills__bar">
+                                <div class="skills__progress_bar">
+                                    <div class="skills__progress" style="width:45%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                     </div><!--/.skills-->
+                 </div><!--/.resume__item-->
+             </div><!--/.resume-->
+        </div><!--/.modal__dialog-->
+        
+    </div><!--/.modal-->
+    
+    <!--JS-->
+    
+    <script src="js/app.js"></script>
+</body>
+</html>

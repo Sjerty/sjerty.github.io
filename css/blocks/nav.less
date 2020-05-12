@@ -1,0 +1,42 @@
+// main: ../style.less
+
+.nav{
+    display: flex;
+}
+
+.nav__link{
+    position: relative;
+    padding: 0 1rem;
+    
+    font-size: 1.2rem;
+    color: @black;
+    font-weight: 700;
+    
+    text-decoration: none;
+
+    
+    &::after{
+        content: "";
+        position: absolute;
+        display: block;
+        width: 0%;
+        bottom: 0;
+        height: 2px;
+        left: 50%;
+        background: @yellow;
+        z-index:-1;
+        transition: width .2s linear,
+                    left .2s linear;
+    }
+    &:hover:after{
+        width: 100%;
+        left: 0;
+    }
+    &:active{
+        color: @white;
+    }
+    &:active:after{
+        height: 100%;
+    }
+    
+}
