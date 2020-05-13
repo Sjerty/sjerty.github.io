@@ -37,6 +37,16 @@
     &.hidden{
         display: none;
     }
+    
+    @media @notebook{
+        max-width: 1000px;
+        max-height: 700px;
+    }
+    
+    @media @mobile{
+        max-width: 800px;
+        max-height: 500px;
+    }
 }
 
 .modal__close{
@@ -56,5 +66,20 @@
     
     &:hover{
         transform: rotate(90deg);
+    }
+    
+     @media @tablet{
+        width: 20px;
+        height: 20px;
+    }
+    
+   
+}
+
+.modal__close-img{
+    
+     @media @tablet{
+        width: 20px;
+        height: 20px;
     }
 }

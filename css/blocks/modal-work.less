@@ -9,9 +9,13 @@
 .modal-work__preview{
     border-radius:  1rem 0 0 1rem ;
     width: 65%;
-    position: relative;
     overflow-y: scroll;
     overflow-x: hidden;
+    
+    @media @mobile{
+        padding: 3rem 0;
+    }
+    
 }
 
 .modal-work__preview::-webkit-scrollbar {
@@ -20,24 +24,42 @@
 }
 
 .modal-work__image{
-    position: absolute;
-    top: 50%;
-    left: 50%;
     z-index: 1;
+    width: 100%;
     
-    transform: translate3d(-50%,-50%,0);
+    
 }
 
 .modal-work__content{
     width: 35%;
     
-    padding: 2.66rem
+    padding: 2.66rem;
+        
+    overflow-y: scroll;
+    overflow-x: hidden;
+    
+    @media @tablet{
+        padding: 1rem;
+    }
+}
+
+.modal-work__content::-webkit-scrollbar {
+    width:0px;
 }
 
 .modal-work__title{
     font-size: 2.4rem;
     text-transform: uppercase;
     margin-bottom: 0.5rem;
+    
+    @media @notebook{
+        font-size: 2rem;
+    }
+    
+    @media @mobile{
+        font-size: 1rem;
+    }
+
 }
 
 .modal-work__cat{
@@ -47,10 +69,25 @@
     color: @yellow;
     
     margin-bottom: 0.5rem;
+    
+    @media @notebook{
+        font-size: .8rem;
+    }
+    @media @mobile{
+        font-size: .8rem;
+    }
 }
 
 .modal-work__client{
-    font-size: 1.2rem;    
+    font-size: 1.2rem;  
+    
+    @media @notebook{
+        font-size: .8rem;
+    }
+    
+    @media @mobile{
+        font-size: .8rem;
+    }
 }
 
 .modal-work__client-title{
@@ -60,5 +97,17 @@
 
 .modal-work__company{
     color: @yellow;
+}
+
+.modal-work__text{
+    font-size: 1.2rem;
+    
+    @media @notebook{
+        font-size: .8rem;
+    }
+    
+    @media @mobile{
+        font-size: .8rem;
+    }
 }
 

@@ -23,11 +23,17 @@
 .work__image{
     display: block;
     max-width: 100%;
+    
+    
 }
 
 .work__content{
     border-top: 1px solid @black;
     padding: 1rem;
+    
+    @media @mobile{
+        font-size: 1rem;
+    }
 }
 
 .work__cat{
@@ -35,6 +41,10 @@
     color: @yellow;
     
     text-transform: uppercase;
+    
+    @media @mobile{
+        font-size: 1rem;
+    }
 }
 .work__title{
     display: flex;
@@ -45,4 +55,8 @@
     color:@black;
     
     text-transform: uppercase;
+    
+    @media @mobile{
+        font-size: 1rem;
+    }
 }

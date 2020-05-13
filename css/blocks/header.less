@@ -3,6 +3,17 @@
 .header{
     padding-top: 3rem;
     
+    @media @mobile{
+        background-color: #fff;
+        padding: 1rem;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+    }
+    
+    
 }
 
 .header__inner{
@@ -10,3 +21,4 @@
     justify-content: space-between;
     align-items: center;
 }
+

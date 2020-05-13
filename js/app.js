@@ -64,5 +64,21 @@ $(function(){
         event.stopPropagation();
     });
     
+    /*Mobile-Nav*/
+    
+    const navToggle = $("#navToggle");
+    const nav = $("#nav");
+    let navlink = $("[data-link]");
+    
+    navToggle.on("click", function(event)  {
+        event.preventDefault();
+    
+        nav.toggleClass("show");
+    });
+    
+    navlink.on("click", function(event){
+        
+        nav.toggleClass("show");
+    });
 
 });

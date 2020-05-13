@@ -48,20 +48,30 @@
     &:active:after{
         height: 100%;
     }
+    
+    @media @tablet{
+        font-size: .9rem;
+    }
 }
 
 .footer__user{
     display: flex;
     align-items: center;
+    
+    
 }
 
 .footer__name{
     font-size: 1.2rem;
     font-weight: 700;
+    
+    @media @tablet{
+        font-size: .9rem;
+    }
 }
 
 .footer__span{
-    height: 1.66rem;
+    height: 1.66em;
     width: 1px;
     background-color: @yellow;
     margin: 0 1.07rem;
@@ -69,8 +79,9 @@
 }
 
 .footer__img{
-    width: 1rem;
+    width: 1em;
     height: auto;
     line-height: 1;
     vertical-align: middle;
+    
 }

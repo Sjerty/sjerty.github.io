@@ -13,11 +13,35 @@
     text-transform: uppercase;
     font-weight: 700;
     color: @white;
+    
+    @media @notebook{
+        padding: 1.5rem;
+        
+        font-size: 1.6rem
+    }
+    
+    @media @mobile{
+        font-size: 1.2rem;
+        padding: 1.5rem;
+    }
 }
 
 .education__item{
     padding: 1.5rem 3rem;
     font-size: 1.2rem;
+    
+    @media @notebook{
+        font-size: .8rem;
+    }
+    
+    @media @tablet{
+        font-size: 1rem;
+    }
+    
+    @media @mobile{
+        font-size: .8rem;
+        padding: 1rem;
+    }
 }
 
 .education__date{

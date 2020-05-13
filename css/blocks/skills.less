@@ -3,6 +3,12 @@
 .skills{
     height: 100%;
     width: 50%;
+    
+    @media @mobile{
+        font-size: 1.2rem;
+        width: 100%;
+        height: auto;
+    }
 }
 
 .skills__title{
@@ -14,6 +20,16 @@
     text-transform: uppercase;
     font-weight: 700;
     color: @white;
+    
+    @media @notebook{
+        padding: 1.5rem;
+        font-size: 1.6rem;
+    }
+    
+     @media @mobile{
+        font-size: 1.2rem;
+    }
+    
 }
 
 .skills__item{
@@ -21,11 +37,25 @@
     align-items: center;
     margin: 2rem 0;
     padding-left: 3rem;
+    
+    @media @mobile{
+        padding-left: 1rem;
+    }
 }
 
 .skills__skill{
     font-size: 1.2rem;
     width: 5em;
+    
+    @media @notebook{
+        font-size: .9rem;
+    }
+    
+    @media @tablet{
+        font-size: 1rem;
+    }
+    
+    
 }
 
 .skills__bar{
@@ -37,6 +67,12 @@
     height: 1rem;
     
     background-color: @black;
+    
+    @media @notebook{
+        width: 200px;
+        height: .5rem;
+    }
+    
 }
 
 .skills__progress{
