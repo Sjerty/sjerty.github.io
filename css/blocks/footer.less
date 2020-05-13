@@ -13,6 +13,14 @@
     color: @yellow;
 }
 
+.footer__nav{
+    
+    @media @mobile{
+        padding-left: 1rem;
+        text-align: right;
+    }    
+}
+
 .footer__link{
     
     position: relative;
@@ -50,7 +58,13 @@
     }
     
     @media @tablet{
-        font-size: .9rem;
+        font-size: 1rem;
+    }
+    
+    @media @mobile{
+        margin: 0;
+        padding: 0;
+        font-size: .8rem;
     }
 }
 
@@ -58,6 +72,7 @@
     display: flex;
     align-items: center;
     
+ 
     
 }
 
@@ -66,7 +81,12 @@
     font-weight: 700;
     
     @media @tablet{
-        font-size: .9rem;
+        font-size: 1rem;
+    }
+    
+    @media @mobile{
+        font-size: .8rem;
+        padding-right: 1rem;
     }
 }
 
@@ -75,6 +95,10 @@
     width: 1px;
     background-color: @yellow;
     margin: 0 1.07rem;
+    
+    @media @mobile{
+        display: none;
+    }
 
 }
 
