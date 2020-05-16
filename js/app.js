@@ -1,84 +1,83 @@
-$(function(){
+$(function(){/*Когда документ готов запустить функцию*/
 
-    let filter = $("[data-filter]");
+    /*Filter*/
+    let filter = $("[data-filter]");/*Элементы с дата-атрибутом filter сохраняются в переменную*/
     
-    filter.on("click", function(event) {
-        event.preventDefault();
+    filter.on("click", function(event) {/*При клике на элементы с data-filter будет вызываться функция*/
+        event.preventDefault(); /*Предотвращение стандартного поведения ссылок*/
          
-        let cat = $(this).data('filter');
+        let cat = $(this).data('filter');/*Сохранение значения data-filter*/
         if(cat == 'all'){
-            $("[data-cat]").removeClass("hide");
+            $("[data-cat]").removeClass("hide");/*Если фильтр = "all", то у всех блоков убирается класс hide*/
         } else {
 
-            $("[data-cat]").each(function(){
+            $("[data-cat]").each(function(){/*Перебор каждого элемента с присвоенной категорией*/
                 
-                let workCat = $(this).data('cat');
+                let workCat = $(this).data('cat');/*Сохранение элементов с категорией в переменную*/
 
                 if(workCat != cat){
-                    $(this).addClass('hide');
+                    $(this).addClass('hide');/*Если категория не равна фильтру, то добавить класс hide*/
                 } else{
-                    $(this).removeClass('hide');
+                    $(this).removeClass('hide');/*Иначе убрать*/
                 }
-
             });
         }
     });
     
    /*Modal*/ 
+    const modal_call = $("[data-modal]"); /*Поиск элементов с дата-атрибутом modal*/
+    const modal_close = $("[data-close]");/*Поиск элементов с дата-атрибутом close*/
     
-    const modal_call = $("[data-modal]");
-    const modal_close = $("[data-close]");
-    
-    modal_call.on("click", function(event){
-        event.preventDefault();
+    modal_call.on("click", function(event){/*При клике на элементы с modal будет вызываться функция*/
+        event.preventDefault(); /*Предотвращение стандартного поведения ссылок*/
         
-        let $this = $(this);
-        let modalId = $this.data('modal');
+        let $this = $(this);/*Сохранения данного элемента в переменную для удобства*/
+        let modalId = $this.data('modal');/*Сохранение необходимого id модального окна для вызова*/
         
-        $(modalId).addClass('show');
-        $('body').addClass('no-scroll');
+        $(modalId).addClass('show');/*Показать модальное окно*/
+        $('body').addClass('no-scroll');/*Блок прокрутки веб-страницы*/
         
-        setTimeout(function(){
+        setTimeout(function(){/*Задержка вызова функции*/
             $(modalId).find(".modal__dialog").css({
-                transform: "rotateX(0)"
+                transform: "rotateX(0)"/*функция трансформации для плавного появления*/
             })
         },200);
     });
     
-    modal_close.on("click", function(event){
-        event.preventDefault();
+    modal_close.on("click", function(event){/*При клике на кнопку закрытия модального окна вызывается функция*/
+        event.preventDefault();/*Предотвращение стандартного поведения кнопки*/
         
-        let $this = $(this);
-        let modalPar = $this.parents('.modal');
+        let $this = $(this);/*Сохранения данного элемента в переменную для удобства*/
+        let modalPar = $this.parents('.modal');/*Поиск "родителя" данной кнопки у которого класс .modal и сохранение его в переменную*/
         
-        modalPar.removeClass('show');
-        $('body').removeClass('no-scroll');
+        modalPar.removeClass('show');/*Скрытие модального окна*/
+        $('body').removeClass('no-scroll');/*Снятие запрета на прокрутку страницы*/
     });
     
-    $(".modal").on("click", function(event){
-        $(this).removeClass('show');
-        $('body').removeClass('no-scroll');
+    $(".modal").on("click", function(event){/*При клике за границей модального окна вызывается функция*/
+        $(this).removeClass('show');/*Скрытие модального окна*/
+        $('body').removeClass('no-scroll');/*Снятие запрета на прокрутку страницы*/
     });
     
-    $(".modal__dialog").on("click", function(event){
-        event.stopPropagation();
+    $(".modal__dialog").on("click", function(event){/*При клике на модальном окне вызывается функция*/
+        event.stopPropagation();/* Отмена поведения родителя(простое объяснение), или же предотвращение дальнейшей передачи события вверх по иерархии DOM :> */
     });
     
-    /*Mobile-Nav*/
+    /*Mobile-Nav*/ /*Мобильная навигация*/
     
-    const navToggle = $("#navToggle");
-    const nav = $("#nav");
-    let navlink = $("[data-link]");
+    const navToggle = $("#navToggle");/*Сохранение в переменную элемента с id = "navToggle" */
+    const nav = $("#nav");/*Сохранение в переменную элемента с id = "nav" */
+    let navlink = $("[data-link]");/*Сохранение в переменную элементов с дата-атрибутом link */
     
-    navToggle.on("click", function(event)  {
-        event.preventDefault();
+    navToggle.on("click", function(event)  {/*При клике на "бургер"(сложенное меню на смартфоне) вызывается функция*/
+        event.preventDefault();/*Предотвращение стандартного поведения кнопки*/
     
-        nav.toggleClass("show");
+        nav.toggleClass("show");/*Переключение класса "show"(показать выпадающее меню)*/
     });
     
-    navlink.on("click", function(event){
+    navlink.on("click", function(event){/*При клике на ссылку в выпадающем меню вызывается функция*/
         
-        nav.toggleClass("show");
+        nav.toggleClass("show");/*Переключение класса "show"(скрыть выпадающее меню)*/
     });
 
 });
