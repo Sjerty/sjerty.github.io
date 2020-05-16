@@ -47,7 +47,7 @@
                     <h2 class="intro__subtitle">Этот сайт представляет из себя<br> мой дипломный проект</h2>
                 </div>
                 
-                <img src="https://placehold.it/500x500" alt="" class="intro__img">
+                <img src="images/welcome.png" alt="" class="intro__img">
                 
             </div><!--/.intro_inner-->
         </div><!--/.container-->
@@ -73,7 +73,7 @@
                         <div class="work__content">
                             <div class="work__cat">Website
                                 <div class="work__title">
-                                    Project Title
+                                    "Сайт-портфолио"
                                     <time class="work__date" datetime="2020-05-01 20:46">2020</time>
                                 </div>
                             </div>
@@ -82,14 +82,14 @@
                     </div>
                 </div>
                 
-                <div class="portfolio__col" data-cat="art">
+                <div class="portfolio__col" data-cat="art" data-modal="#modal_project2">
                    
                     <div class="work">
-                        <img class="work__image" src="https://placehold.it/370x300" alt="">
+                        <img class="work__image" src="images/projects/project_2/project2_img.png" alt="">
                         <div class="work__content">
                             <div class="work__cat">Art
                                 <div class="work__title">
-                                    Project Title
+                                    "Картинки для сайта"
                                     <time class="work__date" datetime="2020-05-01 20:46">2020</time>
                                 </div>
                             </div>
@@ -98,46 +98,14 @@
                     </div>
                 </div>
                 
-                <div class="portfolio__col" data-cat="3D">
+                <div class="portfolio__col" data-cat="3D" data-modal="#modal_project3">
                    
                     <div class="work">
-                        <img class="work__image" src="https://placehold.it/370x300" alt="">
+                        <img class="work__image" src="images/projects/project_3/project3_img.png" alt="">
                         <div class="work__content">
                             <div class="work__cat">3D
                                 <div class="work__title">
-                                    Project Title
-                                    <time class="work__date" datetime="2020-05-01 20:46">2020</time>
-                                </div>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="portfolio__col" data-cat="art">
-                   
-                    <div class="work">
-                        <img class="work__image" src="https://placehold.it/370x300" alt="">
-                        <div class="work__content">
-                            <div class="work__cat">Art
-                                <div class="work__title">
-                                    Project Title
-                                    <time class="work__date" datetime="2020-05-01 20:46">2020</time>
-                                </div>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="portfolio__col" data-cat="3D">
-                   
-                    <div class="work">
-                        <img class="work__image" src="https://placehold.it/370x300" alt="">
-                        <div class="work__content">
-                            <div class="work__cat">3D
-                                <div class="work__title">
-                                    Project Title
+                                    "Модель Карандаша"
                                     <time class="work__date" datetime="2020-05-01 20:46">2020</time>
                                 </div>
                             </div>
@@ -162,13 +130,13 @@
             <div class="about-me__inner">
                 <div class="about-me__content">
                     <h2 class="about-me__title">Обо мне</h2>
-                    <p class="about-me__text">Я обычный студент проживающий в Саратовской области и в данный момент находящийся на обучении в ППК СГТУ им. Гагарина Ю.А. по специализаии ПКС(Программирование в компьютерных системах). Сейчас я уже заканчиваю 4 курс обучения, который по-совместительству является моим последним годом обучения в данном колледже.
-Этот сайт является дипломным проектом который я подготовил в рамках окончания обучения. В основном моими любимыми занятиями являются рисование и программирование, я так же интересуюсь созданием сайтов, поэтому для проверки своих возможностей в этой сфере я и решил выбрать дипломным проектом сайт-портфолио.</p>
+                    <p class="about-me__text">Родился и в данный момент живу в Саратове, нахожусь на обучении в ППК СГТУ им. Гагарина Ю.А. по специализаии ПКС(Программирование в компьютерных системах). Сейчас я уже заканчиваю 4 курс, который является моим последним годом обучения.
+Этот сайт является дипломным проектом который я подготовил в качестве выпускной квалификационной работы. В основном моими любимыми занятиями являются рисование и программирование, пробую себя в 3д моделировании, я так же интересуюсь созданием сайтов, поэтому для проверки своих возможностей в этой сфере я и решил выбрать дипломным проектом сайт-портфолио.</p>
                     <div class="text-right">
                         <a href="" class="btn" data-modal="#modal_resume">Резюме</a>
                     </div>
                 </div>
-                <img class="about-me__image" src="https://placehold.it/420x420" alt="">
+                <img class="about-me__image" src="images/about%20me.png" alt="">
             </div>
             
         </div><!--/.container-->
@@ -178,7 +146,7 @@
     <section class="call-me" id="section-3">
         <div class="container">
             <div class="call-me__inner">
-                <img class="call-me__image" src="https://placehold.it/480x480" alt="">
+                <img class="call-me__image" src="images/call_me.png" alt="">
                 <div class="call-me__form">
                     <h2 class="call-me__title">Напишите мне</h2>
                     <form class="form" action="mail.php" method="post">
@@ -259,6 +227,80 @@
         
     </div><!--/.modal-->
     
+    <div class="modal" id="modal_project2" >
+        <div class="modal__dialog">
+           
+           <button class="modal__close" type="button" data-close>
+               <img class="modal__close-img" src="images/close.svg" alt="">
+           </button>
+           
+            <div class="modal-work">
+                <div class="modal-work__preview">
+                    <img class="modal-work__image" src="images/projects/project_2/project2_work_img.png" alt="">
+                </div>
+                <div class="modal-work__content">
+                    <h2 class="modal-work__title">Картинки для сайта</h2>
+                    <h3 class="modal-work__cat">
+                        ART<br>2020
+                    </h3>
+                    <div class="modal-work__info">
+                        <div class="modal-work__client">
+                           <div class="modal-work__client-title">
+                            Клиент: 
+                            </div>
+                            <div class="modal-work__company">Я</div>
+                        </div>
+                        
+                        <div class="modal-work__text">
+                            <p>Маленькие скетчи моего перонажа Кисы для наполнения сайта, на них было потрачено не очень много времени, но мне они все равно нравятся и хорошо смотрятся на сайте :v</p>
+                        </div>
+                    </div><!--/.modal-work__info-->
+                    
+                </div><!--/.modal-work__content-->
+                
+            </div><!--/.modal-work-->
+            
+        </div><!--/.modal__dialog-->
+        
+        </div><!--/.modal-->
+        
+        <div class="modal" id="modal_project3" >
+        <div class="modal__dialog">
+           
+           <button class="modal__close" type="button" data-close>
+               <img class="modal__close-img" src="images/close.svg" alt="">
+           </button>
+           
+            <div class="modal-work">
+                <div class="modal-work__preview">
+                    <img class="modal-work__image" src="images/projects/project_3/project3_work_img.png" alt="">
+                </div>
+                <div class="modal-work__content">
+                    <h2 class="modal-work__title">3d-Модель механического карандаша</h2>
+                    <h3 class="modal-work__cat">
+                        3D<br>2020
+                    </h3>
+                    <div class="modal-work__info">
+                        <div class="modal-work__client">
+                           <div class="modal-work__client-title">
+                            Клиент: 
+                            </div>
+                            <div class="modal-work__company">Я</div>
+                        </div>
+                        
+                        <div class="modal-work__text">
+                            <p>Простенькая моделька моего любимого механического карандаша, которым я часто пользуюсь и который служит мне уже несколько лет, сначала была сделана хайполи, затем лоуполи и запечена карта нормалей.</p>
+                        </div>
+                    </div><!--/.modal-work__info-->
+                    
+                </div><!--/.modal-work__content-->
+                
+            </div><!--/.modal-work-->
+            
+        </div><!--/.modal__dialog-->
+        
+    </div><!--/.modal-->
+        
     <div class="modal" id="modal_resume" >
         <div class="modal__dialog" >
            
