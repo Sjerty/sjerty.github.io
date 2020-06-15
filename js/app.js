@@ -39,17 +39,6 @@ $(function(){/*Когда документ готов запустить фун�
         })
     }
     
-    function clear_modal(){ /*Функция очистки модального окна*/
-        $(modal_window).find(".modal-work__image").attr(" ");
-        $(modal_window).find(".modal-work__title").html(" ");
-        $(modal_window).find(".modal-work__cat").html(" ");
-        $(modal_window).find(".modal-work__company").html(" ");
-        $(modal_window).find(".modal-work__desc").html(" ");
-        console.log("Всё работает");
-    };
-    
-    
-    
     modal_call.on("click", function(event){/*При клике на элементы с modal будет вызываться функция*/
         event.preventDefault(); /*Предотвращение стандартного поведения ссылок*/
         
@@ -68,19 +57,18 @@ $(function(){/*Когда документ готов запустить фун�
                 },200);
         }
         else{
-                  
-            modal_window.addClass('show');/*Показать модальное окно*/
-            $('body').addClass('no-scroll');/*Блок прокрутки веб-страницы*/
-            
-            $.getJSON('js/worksJS.json',function(jsResults){
-                console.log(jsResults[modalId].id);
+            $.getJSON('js/worksJS.json',function(jsResults){/*Ассинхронный запрос к файлу с данными*/
+                /*Заполнение модального окна*/
                 $(modal_window).find(".modal-work__image").attr("src",jsResults[modalId].img);
                 $(modal_window).find(".modal-work__title").html(jsResults[modalId].title);
                 $(modal_window).find(".modal-work__cat").html(jsResults[modalId].cat + "<br>" +jsResults[modalId].date);
                 $(modal_window).find(".modal-work__company").html(jsResults[modalId].client);
                 $(modal_window).find(".modal-work__desc").html(jsResults[modalId].text);
             });
-
+            
+            modal_window.addClass('show');/*Показать модальное окно*/
+            $('body').addClass('no-scroll');/*Блок прокрутки веб-страницы*/
+            
             setTimeout(function(){/*Задержка вызова функции*/
                 $(modal_window).find(".modal__dialog").css({
                     transform: "rotateX(0)"/*функция трансформации для плавного появления*/
@@ -98,7 +86,6 @@ $(function(){/*Когда документ готов запустить фун�
         modalPar.removeClass('show');/*Скрытие модального окна*/
         $('body').removeClass('no-scroll');/*Снятие запрета на прокрутку страницы*/
         
-        clear_modal();/*Очистка модального окна*/
         reset_modal();/*Сброс поворота модального окна*/
         
     });
@@ -107,7 +94,6 @@ $(function(){/*Когда документ готов запустить фун�
         $(this).removeClass('show');/*Скрытие модального окна*/
         $('body').removeClass('no-scroll');/*Снятие запрета на прокрутку страницы*/
         
-        clear_modal();/*Очистка модального окна*/
         reset_modal();/*Сброс поворота модального окна*/
     });
     
