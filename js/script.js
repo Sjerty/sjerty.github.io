@@ -1,5 +1,7 @@
 $(document).ready(function() { /*Когда сайт загружен, запустить функцию*/
 $('#submit').attr('disabled', true);
+$('#submit').addClass('disabled');
+    
 var pattern = /^[a-z0-9_-]+@[a-z0-9-]+\.[a-z]{2,6}$/i;
 var mail = $("#mail");
     mail.blur(function(){
