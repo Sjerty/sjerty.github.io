@@ -26,7 +26,7 @@
                     <a class="nav__link" data-link="navlink" href="#section-1">Работы</a>
                     <a class="nav__link" data-link="navlink" href="#section-2">Обо мне</a>
                     <a class="nav__link" data-link="navlink" href="#section-3">Связь</a>
-                    <a class="nav__link" data-link="navlink" href="#" data-modal="#modal_resume">Резюме</a>
+                    <a class="nav__link" data-link="navlink" href="#" data-modal="resume">Резюме</a>
                 </nav>
                 
                 <button class="burger" type="button" id="navToggle">
@@ -66,7 +66,7 @@
             </div>
             
             <div class="portfolio">
-                <div class="portfolio__col" data-cat="website" data-modal="#modal_project1">
+                <div class="portfolio__col" data-cat="website" data-modal="0">
                    
                     <div class="work" >
                         <img class="work__image" src="images/projects/project_1/project1_img.png" alt="">
@@ -82,7 +82,7 @@
                     </div>
                 </div>
                 
-                <div class="portfolio__col" data-cat="art" data-modal="#modal_project2">
+                <div class="portfolio__col" data-cat="art" data-modal="1">
                    
                     <div class="work">
                         <img class="work__image" src="images/projects/project_2/project2_img.png" alt="">
@@ -98,7 +98,7 @@
                     </div>
                 </div>
                 
-                <div class="portfolio__col" data-cat="3D" data-modal="#modal_project3">
+                <div class="portfolio__col" data-cat="3D" data-modal="2">
                    
                     <div class="work">
                         <img class="work__image" src="images/projects/project_3/project3_img.png" alt="">
@@ -133,7 +133,7 @@
                     <p class="about-me__text">Родился и в данный момент живу в Саратове, нахожусь на обучении в ППК СГТУ им. Гагарина Ю.А. по специализаии ПКС(Программирование в компьютерных системах). Сейчас я уже заканчиваю 4 курс, который является моим последним годом обучения.
 Этот сайт является дипломным проектом который я подготовил в качестве выпускной квалификационной работы. В основном моими любимыми занятиями являются рисование и программирование, пробую себя в 3д моделировании, я так же интересуюсь созданием сайтов, поэтому для проверки своих возможностей в этой сфере я и решил выбрать дипломным проектом сайт-портфолио.</p>
                     <div class="text-right">
-                        <a href="" class="btn" data-modal="#modal_resume">Резюме</a>
+                        <a href="" class="btn" data-modal="resume">Резюме</a>
                     </div>
                 </div>
                 <img class="about-me__image" src="images/about%20me.png" alt="">
@@ -155,10 +155,11 @@
                         <input type="hidden" name="admin_email" value="sj3rt4@gmail.com">
                         <input type="hidden" name="form_subject" value="Call-me_Form">
                         
-                        <input class="form_input" type="text" placeholder="E-mail" name="e-mail" >
+                        <input id ="mail" class="form_input" type="text" placeholder="E-mail" name="e-mail" >
+                        <span id="valid" class="form_valid"></span>
                         <textarea class="form_textarea" name="input-text" name="Сообщение" placeholder="Сообщение..."></textarea>
                         <div class="text-right">
-                            <button class="btn" type="submit">Отправить</button>
+                            <button class="btn" id="submit" type="submit">Отправить</button>
                         </div>
                     </form>
                 </div>
@@ -182,7 +183,7 @@
                 <div class="footer__nav">
                     <a href="#section-1" class="footer__link">Работы</a>
                     <a href="#section-2" class="footer__link">Обо мне</a>
-                    <a href="#" class="footer__link" data-modal="#modal_resume">Резюме</a>
+                    <a href="#" class="footer__link" data-modal="resume">Резюме</a>
                 </div>
             </div>
         </div><!--/.container-->
@@ -204,7 +205,6 @@
                 <div class="modal-work__content">
                     <h2 class="modal-work__title"></h2>
                     <h3 class="modal-work__cat">
-                        Website<br>2020
                     </h3>
                     <div class="modal-work__info">
                         <div class="modal-work__client">

@@ -27,6 +27,28 @@ $(function(){/*Когда документ готов запустить фун�
    /*Modal*/ 
     const modal_call = $("[data-modal]"); /*Поиск элементов с дата-атрибутом modal*/
     const modal_close = $("[data-close]");/*Поиск элементов с дата-атрибутом close*/
+    const modal_window = $("#modal_window");/*Поиск элемента с id = modal_window*/
+    const modal_resume = $("#modal_resume");
+    
+    function reset_modal(){ /*Функция сброса модального окна*/
+        $(modal_window).find(".modal__dialog").css({
+            transform: "rotateX(90deg)"/*функция трансформации для плавного появления*/
+        })
+        $(modal_resume).find(".modal__dialog").css({
+            transform: "rotateX(90deg)"/*функция трансформации для плавного появления*/
+        })
+    }
+    
+    function clear_modal(){ /*Функция очистки модального окна*/
+        $(modal_window).find(".modal-work__image").attr(" ");
+        $(modal_window).find(".modal-work__title").html(" ");
+        $(modal_window).find(".modal-work__cat").html(" ");
+        $(modal_window).find(".modal-work__company").html(" ");
+        $(modal_window).find(".modal-work__desc").html(" ");
+        console.log("Всё работает");
+    };
+    
+    
     
     modal_call.on("click", function(event){/*При клике на элементы с modal будет вызываться функция*/
         event.preventDefault(); /*Предотвращение стандартного поведения ссылок*/
@@ -34,18 +56,37 @@ $(function(){/*Когда документ готов запустить фун�
         let $this = $(this);/*Сохранения данного элемента в переменную для удобства*/
         let modalId = $this.data('modal');/*Сохранение необходимого id модального окна для вызова*/
         
-        var jsondata = $.getJSON('js/worksJS.json',function(){
-            console.log(jsondata[0]);
-        });
-        
-        $(modalId).addClass('show');/*Показать модальное окно*/
-        $('body').addClass('no-scroll');/*Блок прокрутки веб-страницы*/
-        
-        setTimeout(function(){/*Задержка вызова функции*/
-            $(modalId).find(".modal__dialog").css({
-                transform: "rotateX(0)"/*функция трансформации для плавного появления*/
-            })
-        },200);
+        if (modalId == "resume"){
+            
+            modal_resume.addClass('show');/*Показать модальное окно*/
+            $('body').addClass('no-scroll');/*Блок прокрутки веб-страницы*/
+            
+            setTimeout(function(){/*Задержка вызова функции*/
+                $(modal_resume).find(".modal__dialog").css({
+                    transform: "rotateX(0)"/*функция трансформации для плавного появления*/
+                    })
+                },200);
+        }
+        else{
+                  
+            modal_window.addClass('show');/*Показать модальное окно*/
+            $('body').addClass('no-scroll');/*Блок прокрутки веб-страницы*/
+            
+            $.getJSON('js/worksJS.json',function(jsResults){
+                console.log(jsResults[modalId].id);
+                $(modal_window).find(".modal-work__image").attr("src",jsResults[modalId].img);
+                $(modal_window).find(".modal-work__title").html(jsResults[modalId].title);
+                $(modal_window).find(".modal-work__cat").html(jsResults[modalId].cat + "<br>" +jsResults[modalId].date);
+                $(modal_window).find(".modal-work__company").html(jsResults[modalId].client);
+                $(modal_window).find(".modal-work__desc").html(jsResults[modalId].text);
+            });
+
+            setTimeout(function(){/*Задержка вызова функции*/
+                $(modal_window).find(".modal__dialog").css({
+                    transform: "rotateX(0)"/*функция трансформации для плавного появления*/
+                    })
+                },200);
+            }
     });
     
     modal_close.on("click", function(event){/*При клике на кнопку закрытия модального окна вызывается функция*/
@@ -56,11 +97,18 @@ $(function(){/*Когда документ готов запустить фун�
         
         modalPar.removeClass('show');/*Скрытие модального окна*/
         $('body').removeClass('no-scroll');/*Снятие запрета на прокрутку страницы*/
+        
+        clear_modal();/*Очистка модального окна*/
+        reset_modal();/*Сброс поворота модального окна*/
+        
     });
     
     $(".modal").on("click", function(event){/*При клике за границей модального окна вызывается функция*/
         $(this).removeClass('show');/*Скрытие модального окна*/
         $('body').removeClass('no-scroll');/*Снятие запрета на прокрутку страницы*/
+        
+        clear_modal();/*Очистка модального окна*/
+        reset_modal();/*Сброс поворота модального окна*/
     });
     
     $(".modal__dialog").on("click", function(event){/*При клике на модальном окне вызывается функция*/

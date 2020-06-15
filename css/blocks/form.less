@@ -20,8 +20,24 @@
         outline: none;
         border-color: @yellow;
     }
-}
 
+    &.error{
+        outline: none;
+        border-color: @red;
+    }
+    
+    &.ok{
+        outline: none;
+        border-color: @green;
+    }
+}
+.form_valid{
+    color:@red;
+    
+    &.ok{
+        color:@green;
+    }
+}
 .form_textarea{
     height: 270px;
     resize: none;

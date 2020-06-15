@@ -1,7 +1,7 @@
 [
     {
         "id": "modal_project1",
-        "img-src": "images/projects/project_1/project1_work_img.png",
+        "img": "images/projects/project_1/project1_work_img.png",
         "title": "Сайт-портфолио",
         "cat": "Website",
         "date": "2020",
@@ -10,7 +10,7 @@
     },
     {
         "id": "modal_project2",
-        "img-src": "images/projects/project_2/project2_work_img.png",
+        "img": "images/projects/project_2/project2_work_img.png",
         "title": "Картинки для сайта",
         "cat": "ART",
         "date": "2020",
@@ -19,7 +19,7 @@
     },
     {
         "id": "modal_project3",
-        "img-src": "images/projects/project_3/project3_work_img.png",
+        "img": "images/projects/project_3/project3_work_img.png",
         "title": "3d-Модель механического карандаша",
         "cat": "3D",
         "date": "2020",

@@ -28,4 +28,18 @@
         transform: translate(0,3px);
         box-shadow: none;
     }
+    
+    &.disabled{
+        border-color: fade(@yellow,50%);
+        color: fade(@black,50%);
+        
+        &:hover{
+            transform: none;
+            box-shadow: none;
+        }
+        
+        &:active{
+
+        }
+    }
 }
