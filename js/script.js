@@ -2,11 +2,11 @@ $(document).ready(function() { /*Когда сайт загружен, запу�
 $('#submit').attr('disabled', true);
 $('#submit').addClass('disabled');
     
-var pattern = /^[a-z0-9_-]+@[a-z0-9-]+\.[a-z]{2,6}$/i;
+var pattern = /^[a-z0-9_-]+@[a-z0-9-]+\.[a-z]{2,6}$/i;/*Шаблон почты*/
 var mail = $("#mail");
-    mail.blur(function(){
+    mail.blur(function(){/*Функция активируемая когда почта не в фокусе*/
      if(mail.val() != ''){
-         if(mail.val().search(pattern) == 0){
+         if(mail.val().search(pattern) == 0){/*Сравнивание введенных данных с шаблоном*/
              $('#valid').text('Подходит');
              $('#valid').addClass('ok');
              $('#submit').attr('disabled', false);
